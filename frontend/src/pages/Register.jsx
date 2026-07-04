@@ -37,22 +37,22 @@ export default function Register() {
           <p>Sign up and get a notice feed tailored to your role, department, and schedule.</p>
         </div>
 
-        <label>
+        <label className="auth-field">
           Full name
           <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
         </label>
 
-        <label>
+        <label className="auth-field">
           Email address
           <input type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
         </label>
 
-        <label>
+        <label className="auth-field">
           Password
           <input type="password" required minLength={6} value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} />
         </label>
 
-        <label>
+        <label className="auth-field">
           I am a
           <select value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value })}>
             <option value="student">Student</option>
@@ -65,7 +65,7 @@ export default function Register() {
         </div>
 
         {form.role === "student" ? (
-          <label>
+          <label className="auth-field">
             SRN (Student Registration Number)
             <input required pattern="[A-Z]\d{2}[A-Z]{2}\d{3}" title="Format: R23EQ113" value={form.srn} onChange={(e) => setForm({ ...form, srn: e.target.value.toUpperCase() })} placeholder="e.g. R23EQ113" />
             <span className="text-muted" style={{ fontSize: 13 }}>
@@ -73,7 +73,7 @@ export default function Register() {
             </span>
           </label>
         ) : (
-          <label>
+          <label className="auth-field">
             Employee ID
             <input required pattern="[A-Z]\d{2}[A-Z]{2}\d{3}" title="Format: R23EQ113" value={form.employeeId} onChange={(e) => setForm({ ...form, employeeId: e.target.value.toUpperCase() })} placeholder="e.g. R23EQ113" />
             <span className="text-muted" style={{ fontSize: 13 }}>
@@ -83,7 +83,7 @@ export default function Register() {
         )}
 
         {form.role === "student" && (
-          <label>
+          <label className="auth-field">
             Interests (comma separated)
             <input placeholder="AI, Robotics, Web Dev" value={form.interests} onChange={(e) => setForm({ ...form, interests: e.target.value })} />
           </label>

@@ -533,6 +533,44 @@ input:focus, select:focus, textarea:focus, button:focus-visible {
   font-size: 2.2rem;
 }
 
+.auth-panel label,
+.auth-field,
+.form-stack label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.auth-panel input,
+.auth-panel select,
+.form-stack input,
+.form-stack select,
+.form-stack textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.auth-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.auth-panel .btn,
+.form-stack .btn {
+  width: 100%;
+}
+
+.btn.full-width {
+  width: 100%;
+}
+
 .auth-header p {
   margin: 12px 0 0;
   color: var(--text-muted);

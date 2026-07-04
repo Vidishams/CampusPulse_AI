@@ -31,23 +31,23 @@ export default function Login() {
           <p>Log in to your CampusPulse dashboard and catch the latest notice updates.</p>
         </div>
 
-        <label>
+        <label className="auth-field">
           Email address
           <input type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
         </label>
-        <label>
+        <label className="auth-field">
           Password
           <input type="password" required value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} />
         </label>
 
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ fontSize: 13 }}>
+        <div className="auth-actions">
+          <div className="text-muted" style={{ fontSize: 13 }}>
             <Link to="/forgot-password">Forgot password?</Link>
           </div>
         </div>
 
         {error && <p className="error-text">{error}</p>}
-        <button className="btn btn-primary" disabled={loading}>{loading ? "Logging in…" : "Log in"}</button>
+        <button className="btn btn-primary full-width" disabled={loading}>{loading ? "Logging in…" : "Log in"}</button>
 
         <div className="auth-footer">
           <p className="text-muted">No account? <Link to="/register">Create one</Link></p>
