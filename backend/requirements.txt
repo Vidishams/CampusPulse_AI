@@ -1,0 +1,22 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+motor==3.5.1
+pymongo==4.8.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
+python-multipart==0.0.9
+pydantic==2.9.2
+pydantic-settings==2.5.2
+email-validator==2.2.0
+python-socketio==5.11.4
+python-dotenv==1.0.1
+pytesseract==0.3.13
+Pillow==10.4.0
+PyMuPDF
+
+# Optional -- only needed if you set AI_LIGHTWEIGHT_MODE=false in .env
+# to use real Hugging Face summarization/classification models instead
+# of the built-in lightweight extractive fallback. Uncomment when ready:
+# transformers==4.44.2
+# torch==2.4.1
